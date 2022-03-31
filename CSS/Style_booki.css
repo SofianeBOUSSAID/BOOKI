@@ -1,0 +1,991 @@
+*{font-family: "Raleway",Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    color: inherit;
+    margin: 0;
+    padding: 0;
+
+}
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+:root
+{
+    --normalblue:#0065FC;
+    --lightblue: #DEEBFF;
+    --grey: #F2F2F2;
+}
+ul{
+    list-style-type: none;
+}
+
+.star{
+    font-size: 12px;
+}
+
+.star .grey{
+    color: lightgrey
+}
+
+.star .blue{
+    color: var(--normalblue);
+}
+
+.hebergement{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+
+/***********************REGLES GENERALES***********************************************/
+
+header{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.logo{
+    width: 100px;
+    padding: 30px;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    padding-right: 5%;
+}
+
+nav > div{
+    padding-left: 20px ;
+}
+
+nav > div a{
+    padding: 20px;
+}
+
+nav > div a:hover {
+    color: var(--normalblue);
+    border-top: solid var(--normalblue) 2px;
+    padding-top: 44px;
+    transition: color 0.5s, border 0.1s ;
+}
+
+/***************************FIN DU HEADER***********************************************/
+
+main{
+    margin: 10px  40px;
+}
+h2{
+    padding-bottom: 10px;
+    white-space: nowrap;
+}
+/****************************FIN TITLE****************************/
+
+form{
+    padding: 20px;
+}
+
+.recherche{
+    display: flex;
+    flex-direction: row;
+    border: solid 1px var(--grey);
+    width: 370px;
+    border-top-left-radius: 25%;
+    border-bottom-left-radius: 25%;
+    border-top-right-radius:12px;
+    border-bottom-right-radius:12px;
+}
+
+.loupe{
+    display: none;
+}
+
+.recherche i{
+    background: var(--grey);
+    height: 50px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    border-bottom-left-radius: 25%;
+    border-top-left-radius: 25%;
+}
+
+#recherche{
+    border: none;
+    width: 200px;
+    font-weight: bolder;
+    padding: 10px;
+    font-size: 16px;
+}
+
+input::placeholder{
+    color: black;
+}
+
+.button_rech{
+    color: white;
+    border: none;
+    background: var(--normalblue);
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    font-weight: bolder;
+    width: 120px;
+    font-size: 16px;
+}
+
+
+/*********************FIN BARRE DE RECHERCHE********************/
+
+.filtres{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px;
+    
+}
+.filtres i {
+    background: var(--lightblue);
+    color: var(--normalblue);
+    height: 50px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    border-radius: 50%;
+    margin: -2px;
+}
+
+.filtres ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    padding-left: 10px;
+}
+
+.filtres ul li{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-weight: bold;
+    margin-left: 30px;
+    border: solid var(--grey) 3px;
+    border-radius: 50px;
+    white-space: nowrap;
+    
+}
+
+.filtres ul li:hover{
+    background-color: var(--normalblue);
+    color: rgb(255, 255, 255);
+    transition: background-color 0.5s, color 0.5s ;
+}
+
+.filtres ul li .mot_filtres{
+
+    padding: 10px;
+    z-index: 1;
+}
+
+.info{
+    display: flex;
+    padding-right: 0px ;
+}
+
+.info p{
+    padding-left: 10px;
+    font-weight: 300;
+    white-space: nowrap;
+}
+
+.info i{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    height: 20px;
+    width: 20px;
+    border: solid var(--grey) 1px;
+    color: var(--normalblue);
+    border-radius: 50%;
+    font-size: 70%;
+}
+/****************************FIN FILTRES****************************/
+
+.marseille{
+    background-color: var(--grey);
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin: 10px;
+    height: 550px;
+    justify-content: space-around;
+    border-radius: 12.5px;
+}
+
+.marseille_title{
+    padding: 20px;
+    margin: 10px;
+    height: 5%;
+}
+
+.marseille .etiquette{
+    background-color: white;
+    display: flex;
+    width: 30%;
+    height: 44%;
+    flex-direction: column;
+    padding: 5px;
+    box-shadow: 0px 4.5px 4.5px 3px rgba(0, 0, 0, 0.096);
+    border-radius: 15px;
+    margin: 1px;
+}
+
+.heb_mar{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    height: 90%;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.marseille .image_heb{
+    height: 100px;
+}
+
+.marseille .text_etoile{
+    padding: 5px;
+    width: 100%;
+    height: 40%;
+}
+
+.marseille .etiquette img{
+    border-top-left-radius: 12.5px;
+    border-top-right-radius: 12.5px;
+}
+.marseille .text p{
+    font-size: 15px;
+    margin-top: 5px;
+    margin-bottom: 3px;
+}
+.marseille .text p:nth-child(1){
+    font-weight: bold;
+}
+.marseille .text span{
+    font-weight: 500;
+}
+
+/*************************FIN HEBERGEMENT MARSEILLE*******************/
+
+.pop{
+    background-color: var(--grey);
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    margin: 10px;
+    height: 550px;
+    border-radius: 12.5px;
+}
+.pop_title{
+    padding: 20px;
+    height: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.pop_title i{
+    font-size: 22px;
+}
+
+.pop_title div{
+    padding: 10px;
+}
+
+.pop .etiquette{
+    background-color: white;
+    margin: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    box-shadow: 0px 4.5px 4.5px 3px rgba(0, 0, 0, 0.096);
+    border-radius: 15px;
+    display: flex;
+    padding: 5px;
+}
+
+.pop img{
+    width: 100px;
+    border-bottom-left-radius: 12.5px;
+    border-top-left-radius: 12.5px;
+}
+
+.pop .image_heb{
+    height: 125px;
+}
+
+.pop .text_etoile{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 10px;
+}
+
+.pop .text p{
+    font-size: 15px;
+    padding-bottom: 5px;
+}
+.pop .text p:nth-child(1){
+    font-weight: bold;
+}
+.pop .text span{
+    font-weight: 500;
+}
+
+
+/*************************FIN POPULAIRES*******************/
+
+.activ{
+    width: 100%;
+    margin: 0px;
+    height: 400px;
+    padding: 10px;
+}
+
+.activ_title{
+    margin: 10px;
+}
+
+.block_activ{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 10px;
+}
+
+.activ .etiquette{
+    display: flex;
+    flex-direction: column;
+    border-radius: 12.5px;
+    box-shadow: 0px 4.5px 4.5px 3px rgba(48, 48, 48, 0.096);
+}
+
+.activ .actx1 .image {
+    width: 100%;
+    height: 300px;
+}
+.activ .actx2 .image {
+    width: 100%;
+    height: 125px;
+}
+
+.activ .actx3 .pome {
+    width: 100%;
+    height: 170px;
+}
+
+.activ .actx3 .frio {
+    width: 100%;
+    height: 80px;
+}
+
+.activ img{
+    border-top-left-radius: 12.5px;
+    border-top-right-radius: 12.5px;
+}
+
+.activ .text{
+    font-weight: 600;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: 10px;
+    font-size: 12px;
+}
+
+.actx1{
+    width: 20%;
+    margin: 10px;
+}
+
+.actx2{
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+}
+
+.actx3{
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+}
+
+.actx3 .etiquette{
+    margin: 10px;
+}
+
+.actx2 .etiquette{
+    height: 45%;
+    margin: 10px;
+}
+
+
+
+/****************************DÉBUT FOOTER****************************/
+footer{
+    background: var(--grey);
+    padding: 20px;
+    display: flex;
+    margin-top: auto;
+    flex: none;
+    justify-content: space-around;
+    white-space: nowrap;
+}
+
+footer ul{
+display: flex;
+flex-direction: column;
+padding-left: 50px;
+padding-right: 50px;
+}
+
+footer > ul > li:nth-child(1){
+    font-weight: bold;
+}
+
+footer li {
+    line-height: 2;
+}
+
+.invisible{
+    width: 35%;
+}
+
+/*****************************DEBUT MEDIA TABLETTE*****************************/
+
+@media (max-width: 992px){
+
+    header {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+.hebergement{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.marseille{
+    background-color: var(--grey);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 10px;
+    height: 550px;
+    justify-content: space-around;
+    border-radius: 12.5px;
+}
+
+.pop{
+    background-color: var(--grey);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 10px;
+    height: 550px;
+    border-radius: 12.5px;
+}
+
+.pop .image_heb{
+    width: 50%;
+}
+
+.pop .image_heb img{
+    width: 100%;
+}
+
+.filtres{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+    .filtres ul {
+        display: flex;
+        padding-left: 10px;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: flex-start;
+        width: 75%;
+    }
+
+    .filtres li{
+        margin: 5px;
+    }
+
+.filtres h3{
+    padding-top: 10px;
+}
+
+.activ .text {
+    font-weight: bold;
+    padding: 5px;
+    margin-left: 10px;
+    font-size: 8px;
+}
+
+footer{
+    background: var(--grey);
+    padding: 20px 0px;
+    display: flex;
+    margin-top: auto;
+    justify-content: start;
+    white-space: nowrap;
+}
+
+footer ul{
+    width:20%;
+}
+
+}
+
+/*****************************DEBUT MEDIA SMARTPHONE*****************************/
+
+@media (max-width: 767px){
+
+    header{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+
+    
+    .logo{
+        width: 150px;
+    }
+    
+    nav{
+        display: flex;
+        width: 100%;
+    }
+    
+    nav > div{
+        width: 100%;
+        padding-left: 0px;
+        padding-right: 20px;
+    }
+    
+    nav > div a{
+        display: flex;
+        justify-content: space-around;
+        font-size: 18px;
+        font-weight: 400;
+        width: 100%;
+        border-bottom: solid var(--grey) 4.5px;
+    }
+    
+    nav > div a:hover {
+        color: var(--normalblue);
+        border-bottom: solid var(--normalblue) 3.5px;
+        padding-top: 20px;
+        border-top: none;
+        transition: color 0.1s, border 0.1s ;
+    }
+
+/***************************FIN DU HEADER***********************************************/
+
+main{
+    margin: 10px 10px;
+}
+h2{
+    padding-bottom: 10px;
+    white-space: pre-wrap;
+    width: 100%;
+    font-size: 20px;
+}
+
+.tete p{
+    font-weight: 300;
+    font-size: 14px;
+}
+
+
+
+/****************************FIN TITLE****************************/
+
+form{
+    padding-top: 30px;
+    padding-bottom: 20px;
+    padding-left: 0px;
+    padding-right: 0px;
+    display: flex;
+    justify-content: center;
+}
+
+.recherche{
+    display: flex;
+    flex-direction: row;
+    border: solid 1px var(--grey);
+    width: 300px;
+    border-top-left-radius: 25%;
+    border-bottom-left-radius: 25%;
+}
+
+.recherche i{
+    background: var(--grey);
+    height: 50px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    border-bottom-left-radius: 25%;
+    border-top-left-radius: 25%;
+}
+
+
+#recherche{
+    border: none;
+    width: 200px;
+    font-weight: bolder;
+    padding: 10px;
+    font-size: 16px;
+}
+
+input::placeholder{
+    color: black;
+}
+
+.button_rech{
+    color: white;
+    border: none;
+    background: var(--normalblue);
+    border-radius: 12.5px;
+    font-weight: bolder;
+    width: 50px;
+    font-size: 16px;
+}
+
+.Rechercher{
+    display: none;
+}
+
+.loupe{
+    display: flex;
+}
+
+.loupe i{
+    background-color: var(--normalblue);
+    border-radius: 25%;
+}
+
+
+/*********************FIN BARRE DE RECHERCHE********************/
+
+.filtres{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+    width: 100%;
+}
+.filtres i {
+    background: var(--lightblue);
+    color: var(--normalblue);
+    height: 50px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    border-radius: 50%;
+    margin: -2px;
+}
+
+.filtres ul{
+    padding-top: 10px ;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding-left: 0px;
+    width: 100%;
+}
+
+.filtres ul li{
+    display: flex;
+    font-weight: bold;
+    margin-left: 5px;
+    border: solid lightgrey 2px;
+    border-radius: 50px;
+    white-space: nowrap;
+    
+}
+
+.filtres ul li:hover{
+    background-color: var(--normalblue);
+    color: rgb(255, 255, 255);
+    transition: background-color 0.5s, color 0.5s ;
+}
+
+.filtres ul li .mot_filtres{
+
+    padding: 10px;
+    z-index: 1;
+}
+
+.info{
+    display: flex;
+    padding-right: 0px ;
+    margin: 10px;
+    margin-bottom: 30px;
+}
+
+.info p{
+    padding-left: 10px;
+    white-space: pre-wrap;
+}
+
+.info i{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    height: 20px;
+    width: 20px;
+    border: solid lightgrey 1px;
+    color: var(--normalblue);
+    border-radius: 100%;
+    font-size: 70%;
+}
+/****************************FIN FILTRES****************************/
+
+.hebergement {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-around;
+    width: 100%;
+    margin: 0px;
+}
+
+.pop{
+    background-color: var(--grey);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 550px;
+    border-radius: 0px;
+    padding: 25px;
+    margin: -10px;
+}
+
+.heb_pop{
+    padding: 0px 15px;
+}
+
+.pop .etiquette{
+    width: 100%;
+    margin: 10px -10px;
+}
+
+.pop_title{
+    padding: 0 0 20px 0;
+    height: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.pop_title i{
+    font-size: 25px;
+}
+
+.pop_title div{
+    padding: 10px;
+}
+
+/*************************FIN POPULAIRES*******************/
+
+.marseille{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 70px;
+    height: 1300px;
+    justify-content: center;
+    border-radius: 12.5px;
+}
+
+.marseille_title{
+    height: 5%;
+}
+
+.marseille .etiquette{
+    background-color: white;
+    display: flex;
+    width: 100%;
+    height: 30%;
+    flex-direction: column;
+    padding: 5px;
+    box-shadow: 0px 4.5px 4.5px 3px rgba(0, 0, 0, 0.096);
+    border-radius: 15px;
+    margin: 10px -10px;
+}
+
+.heb_mar{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 90%;
+    padding-left: 20px;
+    padding-right: 10px;
+}
+
+.marseille .image_heb{
+    height: 100px;
+}
+
+.marseille .text_etoile{
+    padding: 5px;
+    width: 100%;
+    height: 40%;
+}
+
+.marseille .etiquette img{
+    border-top-left-radius: 12.5px;
+    border-top-right-radius: 12.5px;
+}
+.marseille .text p{
+    font-size: 15px;
+}
+.marseille .text p:nth-child(1){
+    font-weight: bold;
+}
+
+
+/*************************FIN HEBERGEMENT MARSEILLE*******************/
+
+.activ{
+    width: 100%;
+    margin: 0px 10px;
+    height: 1340px;
+    padding: 10px;
+
+}
+
+.activ_title{
+    margin: 10px;
+}
+
+.block_activ{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px ;
+}
+
+.activ .etiquette{
+    background-color: white;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    box-shadow: 0px 4.5px 4.5px 3px rgba(0, 0, 0, 0.096);
+    margin: 15px -5px;
+}
+
+.activ .actx1 .image {
+    width: 100%;
+    height: 150px;
+}
+.activ .actx2 .image {
+    width: 100%;
+    height: 150px;
+}
+.activ .actx3 .frio {
+    width: 100%;
+    height: 150px;
+}
+.activ .actx3 .pome {
+    width: 100%;
+    height: 150px;
+}
+
+.activ img{
+    border-top-left-radius: 12.5px;
+    border-top-right-radius: 12.5px;
+}
+
+.activ .text{
+    font-weight: bold;
+    padding: 5px;
+    margin-left: 10px;
+    font-size: 12px;
+}
+
+.actx1{
+    width: 100%;
+    height: 30%;
+    margin: 10px;
+}
+
+.actx2{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+}
+
+.actx2 .etiquette{
+    height: 100%;
+}
+
+.actx3{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+}
+
+.actx3 .etiquette{
+    height: 100%;
+}
+
+/****************************DÉBUT FOOTER****************************/
+footer{
+    background: var(--grey);
+    padding: 20px  40px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+footer ul{
+display: flex;
+flex-direction: column;
+padding-left: 0px;
+padding-right: 50px;
+}
+
+footer > ul > li:nth-child(1){
+    font-weight: 600;
+}
+footer > ul:nth-child(2){
+    padding: 30px 50px 30px 0;
+}
+
+footer li {
+    line-height: 2;
+    font-weight: 300;
+}
+
+}
